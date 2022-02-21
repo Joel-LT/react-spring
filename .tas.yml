@@ -14,6 +14,7 @@ preRun:
     # change the command according to the package manager being used in the repository.
     # For eg, npm ci, yarn install or any other command used to fetch node modules
     - yarn install
+    - yarn add xvfb
     - yarn build
     - yarn test
 
