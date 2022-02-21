@@ -36,13 +36,14 @@ preMerge:
 postRun:
   # set of commands to run after running the tests
   command:
-    - node --version
+    - yarn --version
 
 # path to your custom configuration file required by framework
 configFile: jest.config.js
 
 # provide the semantic version of nodejs required for your project
-nodeVersion: 16.13.1
+# nodeVersion: 16.13.1
+yarnVersion: 3.1.1
 
 # configure whether to smartSelect test-cases. Default true
 smartRun: false
