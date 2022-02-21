@@ -13,9 +13,8 @@ preRun:
   command:
     # change the command according to the package manager being used in the repository.
     # For eg, npm ci, yarn install or any other command used to fetch node modules
+    - apt-get update && apt-get install xvfb
     - yarn install
-    - yarn add cypress --dev
-    - yarn add xvfb
     - yarn build
     - yarn test
 
