@@ -13,11 +13,11 @@ preRun:
   command:
     # change the command according to the package manager being used in the repository.
     # For eg, npm ci, yarn install or any other command used to fetch node modules
-    - su root && apt-get update && apt-get install xvfb
-    - yarn add start-server-and-test
+    # - su root && apt-get update && apt-get install xvfb
+    # - yarn add start-server-and-test
     - yarn install
     - yarn build
-    - yarn test
+    # - yarn test:unit
 
 
 postMerge:
@@ -28,12 +28,13 @@ postMerge:
   # glob-pattern for identifying the test files
   pattern:
     # regex pattern to discover tests to run in case of postMerge
-    - "./packages/**/src/*.test.ts"
+    - "./{targets,packages}/**/src/*.test.{ts,tsx}"
+    # - "./packages/**/src/*.test.ts"
 
 preMerge:
   pattern:
     # regex pattern to discover tests to run in case of premerge
-    - "./packages/**/src/*.test.ts"
+    - "./{targets,packages}/**/src/*.test.{ts,tsx}"
 
 postRun:
   # set of commands to run after running the tests
@@ -45,10 +46,10 @@ configFile: jest.config.js
 
 # provide the semantic version of nodejs required for your project
 # nodeVersion: 16.13.1
-yarnVersion: 3.1.1
+# yarnVersion: 3.1.1
 
 # configure whether to smartSelect test-cases. Default true
-smartRun: false
+smartRun: true
 
 # supported tiers: xsmall|small|medium|large|xlarge
 # tier: small
