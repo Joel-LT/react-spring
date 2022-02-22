@@ -144,9 +144,9 @@ function describeProps() {
 
 function describeToProp() {
   describe('when "to" prop is changed', () => {
-    it.todo('resolves the "start" promise with (finished: false)')
-    it.todo('avoids calling the "onStart" prop')
-    it.todo('avoids calling the "onRest" prop')
+    it.skip('resolves the "start" promise with (finished: false)')
+    it.skip('avoids calling the "onStart" prop')
+    it.skip('avoids calling the "onRest" prop')
   })
 
   describe('when "to" prop equals current value', () => {
@@ -196,7 +196,7 @@ function describeToProp() {
 
 function describeFromProp() {
   describe('when "from" prop is defined', () => {
-    it.todo('controls the start value')
+    it.skip('controls the start value')
   })
 }
 
@@ -216,8 +216,8 @@ function describeResetProp() {
       expect(spring.get()).toBe(0)
     })
 
-    it.todo('resolves the "start" promise with (finished: false)')
-    it.todo('calls the "onRest" prop with (finished: false)')
+    it.skip('resolves the "start" promise with (finished: false)')
+    it.skip('calls the "onRest" prop with (finished: false)')
   })
 }
 
@@ -372,9 +372,9 @@ function describeReverseProp() {
 
 function describeImmediateProp() {
   describe('when "immediate" prop is true', () => {
-    it.todo('still resolves the "start" promise')
-    it.todo('never calls the "onStart" prop')
-    it.todo('never calls the "onRest" prop')
+    it.skip('still resolves the "start" promise')
+    it.skip('never calls the "onStart" prop')
+    it.skip('never calls the "onRest" prop')
 
     it('stops animating', async () => {
       const spring = new SpringValue(0)
@@ -871,7 +871,7 @@ function describeTarget(name: string, create: (from: number) => OpaqueTarget) {
       expect(spring.get()).toBe(target.node.get())
     })
 
-    it.todo('preserves its "onRest" prop between animations')
+    it.skip('preserves its "onRest" prop between animations')
 
     it('can change its target while animating', async () => {
       spring.start({ to: target.node })

@@ -40,17 +40,17 @@ describe('useTrail', () => {
   })
 
   describe('when a props function is passed', () => {
-    it.todo('does nothing on rerender')
+    it.skip('does nothing on rerender')
   })
 
   describe('with the "reverse" prop', () => {
     describe('when "reverse" becomes true', () => {
-      it.todo('swaps the "to" and "from" props')
-      it.todo('has each spring follow the spring after it')
+      it.skip('swaps the "to" and "from" props')
+      it.skip('has each spring follow the spring after it')
     })
     describe('when "reverse" becomes false', () => {
-      it.todo('uses the "to" and "from" props as-is')
-      it.todo('has each spring follow the spring before it')
+      it.skip('uses the "to" and "from" props as-is')
+      it.skip('has each spring follow the spring before it')
     })
   })
 })

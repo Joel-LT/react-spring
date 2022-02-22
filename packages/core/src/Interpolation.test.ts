@@ -3,16 +3,16 @@ import { to } from './interpolate'
 import { addFluidObserver } from '@react-spring/shared'
 
 describe('Interpolation', () => {
-  it.todo('can use a SpringValue')
-  it.todo('can use another Interpolation')
-  it.todo('can use a non-animated FluidValue')
+  it.skip('can use a SpringValue')
+  it.skip('can use another Interpolation')
+  it.skip('can use a non-animated FluidValue')
 
   describe('when multiple inputs change in the same frame', () => {
-    it.todo('only computes its value once')
+    it.skip('only computes its value once')
   })
 
   describe('when an input resets its animation', () => {
-    it.todo('computes its value before the first frame')
+    it.skip('computes its value before the first frame')
   })
 
   describe('when all inputs are paused', () => {
